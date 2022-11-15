@@ -4,6 +4,7 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/services/*": ["services/*"],
+      "@/models/*": ["src/models/*"],
       "@/styles/*": ["src/styles/*"],
       "@/utils/*": ["src/utils/*"]
     }
