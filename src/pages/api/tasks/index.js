@@ -30,7 +30,8 @@ const handler = async (req, res) => {
       }
 
     default:
-      break;
+      res.setHeader('Allow', ['GET', 'PATCH', 'DELETE']);
+      return res.status(405).json({ message: `This method (${method}) is not supported` });
   }
 };
 
