@@ -12,3 +12,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+body {
+  font-size: 1.6rem;
+}
