@@ -53,10 +53,10 @@ const Home = ({ tasks }) => {
                 </Button>
                 <Button
                   color='blue'
-                  onClick={() => router.push(`/tasks/${id}/edit`)}
+                  onClick={() => router.push(`/tasks/${id}/update`)}
                   style={{ fontSize: '1.6rem' }}
                 >
-                  Edit
+                  Update
                 </Button>
               </Card.Content>
             </Card>
