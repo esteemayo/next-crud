@@ -7,8 +7,12 @@ import { runMiddleware } from '@/utils/runMiddleware';
 dbConnect();
 
 const handler = async (req, res) => {
-  const { method, query: { id: taskId }, body } = req;
   const morgan = Morgan('dev');
+  const {
+    body,
+    method,
+    query: { id: taskId },
+  } = req;
 
   switch (method) {
     case 'GET':
@@ -58,7 +62,7 @@ const handler = async (req, res) => {
 
     default:
       res.setHeader('Allow', ['GET', 'PATCH', 'DELETE']);
-      return res.status(405).json({ message: `This method (${method}) is not supported` });
+      return res.status(405).json({ message: `This method ${method} is not allowed` });
   }
 };
 
