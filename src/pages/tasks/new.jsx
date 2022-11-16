@@ -10,7 +10,7 @@ const initialState = {
 };
 
 const CreateTask = () => {
-  const router = useRouter();
+  const { push } = useRouter();
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [inputs, setInputs] = useState(initialState);
@@ -44,7 +44,7 @@ const CreateTask = () => {
     setIsSubmit(true);
 
     await handleCreateTask();
-    await router.push('/');
+    await push('/');
   };
 
   const handleCreateTask = async () => {
