@@ -30,6 +30,7 @@ const Navbar = () => {
               size='mini'
               primary
               onClick={() => router.push('/tasks/new')}
+              style={{ fontSize: '1.6rem' }}
             >
               New Task
             </Button>
