@@ -95,7 +95,9 @@ const CreateTask = () => {
                         : null
                     }
                   />
-                  <Button type='submit' color='primary'>Submit</Button>
+                  <Button type='submit' primary>
+                    {taskId ? 'Update' : 'Submit'}
+                  </Button>
                 </Form>
               )}
             </div>
