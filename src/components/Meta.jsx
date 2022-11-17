@@ -16,8 +16,8 @@ const Meta = ({ title, keywords, description }) => {
 
 Meta.defaultProps = {
   title: 'Task App',
-  keywords: '',
-  description: '',
+  keywords: 'Task app is a task management application',
+  description: 'tasks, todos etc',
 };
 
 export default Meta;
