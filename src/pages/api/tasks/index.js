@@ -30,7 +30,7 @@ const handler = async (req, res) => {
       }
 
     default:
-      res.setHeader('Allow', ['GET', 'PATCH', 'DELETE']);
+      res.setHeader('Allow', ['GET', 'POST']);
       return res.status(405).json({ message: `This method ${method} is not allowed` });
   }
 };
