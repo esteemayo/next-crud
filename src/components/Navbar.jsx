@@ -17,7 +17,7 @@ const Navbar = () => {
         <Menu.Item name='home'>
           <Link href='/' passHref>
             <Image
-              src='/vercel.svg'
+              src='/logo192.png'
               width={50}
               height={50}
               alt=''
