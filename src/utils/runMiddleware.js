@@ -7,4 +7,4 @@ export function runMiddleware(req, res, fn) {
       return resolve(result);
     });
   });
-}
+};
