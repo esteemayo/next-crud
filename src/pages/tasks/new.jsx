@@ -65,7 +65,7 @@ const CreateTask = () => {
       <Grid.Row>
         <Grid.Column textAlign='center'>
           <div>
-            <h1>Create Task</h1>
+            <h1>{taskId ? 'Update Task' : 'Create Task'}</h1>
             <div>
               {isSubmit ? (
                 <Loader active inline='centered' />
