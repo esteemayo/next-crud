@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Button, Form, Grid, Loader } from 'semantic-ui-react';
 
-import { createTask } from '@/services/taskService';
+import * as taskAPI from '@/services/taskService';
 
 const initialState = {
   title: '',
