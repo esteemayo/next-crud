@@ -63,7 +63,7 @@ const Task = ({ task, error }) => {
       </Grid.Row>
       <Confirm
         content='Are you sure to delete that task'
-        header='Pleaseconfirm'
+        header='Please confirm'
         open={confirm}
         onCancel={close}
         onConfirm={handleDelete}
