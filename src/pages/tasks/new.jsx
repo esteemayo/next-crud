@@ -47,9 +47,17 @@ const CreateTask = () => {
     await push('/');
   };
 
-  const handleCreateTask = async () => {
+  const createTask = async () => {
     try {
-      await createTask({ ...inputs });
+      await taskAPI.createTask({ ...inputs });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const updateTask = async () => {
+    try {
+      await taskAPI.updateTask(taskId, inputs);
     } catch (err) {
       console.log(err);
     }
