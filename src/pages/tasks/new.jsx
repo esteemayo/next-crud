@@ -43,7 +43,12 @@ const CreateTask = () => {
     if (Object.keys(errors).length) return setErrors(errors);
     setIsSubmit(true);
 
-    await handleCreateTask();
+    if (query.id) {
+      await updateTask();
+    } else {
+      await createTask();
+    }
+
     await push('/');
   };
 
