@@ -55,6 +55,19 @@ const CreateTask = () => {
     }
   };
 
+  const fetchTask = useCallback(async () => {
+    try {
+      const { data } = await taskAPI.getTask(taskId);
+      setInputs({ title: data.title, description: data.description });
+    } catch (err) {
+      console.log(err);
+    }
+  }, [taskId]);
+
+  useEffect(() => {
+    taskId && fetchTask();
+  }, [fetchTask, taskId]);
+
   return (
     <Grid
       centered
