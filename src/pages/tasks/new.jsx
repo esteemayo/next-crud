@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useState } from 'react';
 import { Button, Form, Grid, Loader } from 'semantic-ui-react';
@@ -11,11 +10,12 @@ const initialState = {
 };
 
 const CreateTask = () => {
-  const { push } = useRouter();
+  const { push, query } = useRouter();
   const [errors, setErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [inputs, setInputs] = useState(initialState);
 
+  const taskId = query.id;
   const { title, description } = inputs;
 
   const handleChange = ({ target: input }) => {
