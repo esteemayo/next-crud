@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { Menu, Container, Button } from 'semantic-ui-react';
 
 const Navbar = () => {
-  const router = useRouter();
+  const { push } = useRouter();
 
   return (
     <Menu
@@ -29,7 +29,7 @@ const Navbar = () => {
             <Button
               size='mini'
               primary
-              onClick={() => router.push('/tasks/new')}
+              onClick={() => push('/tasks/new')}
               style={{ fontSize: '1.6rem' }}
             >
               New Task
