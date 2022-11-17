@@ -93,7 +93,7 @@ export const getStaticProps = async ({ params: { id } }) => {
       props: {
         task: data,
       },
-      revalidate: false,
+      revalidate: 1,
     };
   }
 
